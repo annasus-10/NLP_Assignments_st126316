@@ -1,0 +1,19 @@
+[project]
+name = "assignment6-naive-rag-vs-contextual-retrieval"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "faiss-cpu>=1.13.2",
+    "google-generativeai>=0.8.6",
+    "langchain>=1.2.13",
+    "langchain-community>=0.4.1",
+    "langchain-text-splitters>=1.1.1",
+    "pandas>=3.0.1",
+    "pypdf>=6.9.1",
+    "python-dotenv>=1.2.2",
+    "rouge-score>=0.1.2",
+    "sentence-transformers>=5.3.0",
+    "tqdm>=4.67.3",
+]

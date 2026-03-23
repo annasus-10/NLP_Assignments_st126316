@@ -1,0 +1,82 @@
+[
+  {
+    "question": "What is a neural network?",
+    "ground_truth_answer": "TODO"
+  },
+  {
+    "question": "What is the role of weights in a neural network?",
+    "ground_truth_answer": "TODO"
+  },
+  {
+    "question": "What is an activation function?",
+    "ground_truth_answer": "TODO"
+  },
+  {
+    "question": "Why are nonlinear activation functions important?",
+    "ground_truth_answer": "TODO"
+  },
+  {
+    "question": "What is the purpose of the bias term in a neuron?",
+    "ground_truth_answer": "TODO"
+  },
+  {
+    "question": "What does a hidden layer do?",
+    "ground_truth_answer": "TODO"
+  },
+  {
+    "question": "What is forward propagation?",
+    "ground_truth_answer": "TODO"
+  },
+  {
+    "question": "What is the output layer responsible for?",
+    "ground_truth_answer": "TODO"
+  },
+  {
+    "question": "How is a neural network trained?",
+    "ground_truth_answer": "TODO"
+  },
+  {
+    "question": "What is a loss function?",
+    "ground_truth_answer": "TODO"
+  },
+  {
+    "question": "What is gradient descent?",
+    "ground_truth_answer": "TODO"
+  },
+  {
+    "question": "What is backpropagation?",
+    "ground_truth_answer": "TODO"
+  },
+  {
+    "question": "Why are learning rates important in training?",
+    "ground_truth_answer": "TODO"
+  },
+  {
+    "question": "What problem can occur if the learning rate is too high?",
+    "ground_truth_answer": "TODO"
+  },
+  {
+    "question": "What problem can occur if the learning rate is too low?",
+    "ground_truth_answer": "TODO"
+  },
+  {
+    "question": "What is overfitting in neural networks?",
+    "ground_truth_answer": "TODO"
+  },
+  {
+    "question": "What is underfitting?",
+    "ground_truth_answer": "TODO"
+  },
+  {
+    "question": "How does model depth affect neural networks?",
+    "ground_truth_answer": "TODO"
+  },
+  {
+    "question": "What is the difference between training and inference?",
+    "ground_truth_answer": "TODO"
+  },
+  {
+    "question": "Why are neural networks effective for complex patterns?",
+    "ground_truth_answer": "TODO"
+  }
+]

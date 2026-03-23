@@ -1,0 +1,140 @@
+[
+  {
+    "question": "What is a neural network?",
+    "ground_truth_answer": "TODO",
+    "naive_rag_answer": "Based on the provided text, a neural network is an abstract computational device and a fundamental tool for language processing. It is a network of small computing units, each of which takes a vector of input values and produces a single output value. \n\nKey characteristics include:\n*   **Structure:** They are built out of neural units organized into layers (typically input, hidden, and output units). In a fully-connected feedforward network, each unit in one layer connects to every unit in the next.\n*   **Mechanism:** Each unit multiplies input values by a weight vector, adds a bias, and applies a non-linear activation function (such as sigmoid, tanh, or ReLU).\n*   **Function:** They learn representations in early layers that are utilized by later layers. They can function as probabilistic classifiers, such as in neural language models.\n*   **Training:** They are trained using optimization algorithms like gradient descent and error backpropagation to compute gradients of the loss function.\n*   **Origin:** While originally inspired by the biological McCulloch-Pitts neuron, modern neural networks are considered computational models rather than biological ones.",
+    "naive_source_chunks": [
+      {
+        "chunk_id": 76,
+        "text": ". PyTorch (Paszke et al., 2017) and TensorFlow (Abadi et al., 2015) are two of the most popular. The interested reader should consult a neural network textbook for further details; some sugges- tions are at the end of the chapter. 6.7 Summary • Neural networks are built out of neural units. Originally inspired by biologi- cal neurons, neural networks are now an abstract computational device rather than a biological model. • Each neural unit multiplies input values by a weight vector, adds a bias, and then applies a non-linear activation function like sigmoid, tanh, or rectiﬁed linear unit. • In a fully-connected, feedforward network, each unit in layer i is connected to each unit in layer i + 1, and there are no cycles. • The power of neural networks comes from the ability of early layers to learn representations that can be utilized by later layers in the network. • Neural networks are trained by optimization algorithms like gradient de- scent"
+      },
+      {
+        "chunk_id": 19,
+        "text": ". (In Chapter 13 we’ll introduce networks with cycles, called recurrent neural networks.) For historical reasons multilayer networks, especially feedforward networks, are sometimes called multi-layer perceptrons (or MLPs); this is a technical misnomer,multi-layer perceptrons MLP since the units in modern multilayer networks aren’t perceptrons (perceptrons have a simple step-function as their activation function, but modern networks are made up of units with many kinds of non-linearities like ReLUs and sigmoids), but at some point the name stuck. Simple feedforward networks have three kinds of nodes: input units, hidden units, and output units. Fig. 6.8 shows a picture. The input layerx is a vector of simple scalar values just as we saw in Fig. 6.2. The core of the neural network is thehidden layer h formed of hidden units hi,hidden layer each of which is a neural unit as described in Section 6.1, taking a weighted sum of its inputs and then applying a non-linearity"
+      },
+      {
+        "chunk_id": 0,
+        "text": "Speech and Language Processing. Daniel Jurafsky & James H. Martin. Copyright © 2026. All rights reserved. Draft of January 6, 2026. CHAPTER 6 Neural Networks “[M]achines of this character can behave in a very complicated manner when the number of units is large.” Alan Turing (1948) “Intelligent Machines”, page 6 Neural networks are a fundamental computational tool for language process- ing, and a very old one. They are called neural because their origins lie in the McCulloch-Pitts neuron (McCulloch and Pitts, 1943), a simpliﬁed model of the biological neuron as a kind of computing element that could be described in terms of propositional logic. But the modern use in language processing no longer draws on these early biological inspirations. Instead, a modern neural network is a network of small computing units, each of which takes a vector of input values and produces a single output value. In this chapter we introduce the neural net applied to classiﬁcation"
+      },
+      {
+        "chunk_id": 77,
+        "text": ". • Neural networks are trained by optimization algorithms like gradient de- scent. • Error backpropagation, backward differentiation on a computation graph, is used to compute the gradients of the loss function for a network. • Neural language models use a neural network as a probabilistic classiﬁer, to compute the probability of the next word given the previous n words. • Neural language models can use pretrained embeddings, or can learn embed- dings from scratch in the process of language modeling. 26 CHAPTER 6 • N EURAL NETWORKS Historical Notes The origins of neural networks lie in the 1940s McCulloch-Pitts neuron (McCul- loch and Pitts, 1943), a simpliﬁed model of the biological neuron as a kind of com- puting element that could be described in terms of propositional logic"
+      }
+    ]
+  },
+  {
+    "question": "What is the role of weights in a neural network?",
+    "ground_truth_answer": "TODO",
+    "naive_rag_answer": "Based on the provided context, the role of weights in a neural network is as follows:\n\n*   **Connection Strength:** Each weight ($W_{ji}$) represents the weight of the connection from one unit (such as an input unit $x_i$) to another (such as a hidden unit $h_j$).\n*   **Computation:** Neural units use weights to multiply input values, forming a weighted sum of the inputs before adding a bias and applying an activation function.\n*   **Learned Parameters:** Weights are the parameters of the network that are learned during training via optimization algorithms like gradient descent.",
+    "naive_source_chunks": [
+      {
+        "chunk_id": 76,
+        "text": ". PyTorch (Paszke et al., 2017) and TensorFlow (Abadi et al., 2015) are two of the most popular. The interested reader should consult a neural network textbook for further details; some sugges- tions are at the end of the chapter. 6.7 Summary • Neural networks are built out of neural units. Originally inspired by biologi- cal neurons, neural networks are now an abstract computational device rather than a biological model. • Each neural unit multiplies input values by a weight vector, adds a bias, and then applies a non-linear activation function like sigmoid, tanh, or rectiﬁed linear unit. • In a fully-connected, feedforward network, each unit in layer i is connected to each unit in layer i + 1, and there are no cycles. • The power of neural networks comes from the ability of early layers to learn representations that can be utilized by later layers in the network. • Neural networks are trained by optimization algorithms like gradient de- scent"
+      },
+      {
+        "chunk_id": 21,
+        "text": ". 6.8). Each element W ji of the weight matrix W represents the weight of the connection from the ith input unit xi to the jth hidden unit h j. The advantage of using a single matrix W for the weights of the entire layer is that now the hidden layer computation for a feedforward network can be done very 8 CHAPTER 6 • N EURAL NETWORKS x1 x2 xn0 … … +1 b … UW input layer hidden layer output layer h1 y1 y2 yn2 h2 h3 hn1 Figure 6.8 A simple 2-layer feedforward network, with one hidden layer, one output layer, and one input layer (the input layer is usually not counted when enumerating layers). efﬁciently with simple matrix operations. In fact, the computation only has three steps: multiplying the weight matrix by the input vector x, adding the bias vector b, and applying the activation functiong (such as the sigmoid, tanh, or ReLU activation function deﬁned above)"
+      },
+      {
+        "chunk_id": 19,
+        "text": ". (In Chapter 13 we’ll introduce networks with cycles, called recurrent neural networks.) For historical reasons multilayer networks, especially feedforward networks, are sometimes called multi-layer perceptrons (or MLPs); this is a technical misnomer,multi-layer perceptrons MLP since the units in modern multilayer networks aren’t perceptrons (perceptrons have a simple step-function as their activation function, but modern networks are made up of units with many kinds of non-linearities like ReLUs and sigmoids), but at some point the name stuck. Simple feedforward networks have three kinds of nodes: input units, hidden units, and output units. Fig. 6.8 shows a picture. The input layerx is a vector of simple scalar values just as we saw in Fig. 6.2. The core of the neural network is thehidden layer h formed of hidden units hi,hidden layer each of which is a neural unit as described in Section 6.1, taking a weighted sum of its inputs and then applying a non-linearity"
+      },
+      {
+        "chunk_id": 75,
+        "text": ". Tuning of hyperparameters is also important. The parameters of a neural net-hyperparameter work are the weights W and biases b; those are learned by gradient descent. The hyperparameters are things that are chosen by the algorithm designer; optimal val- ues are tuned on a devset rather than by gradient descent learning on the training set. Hyperparameters include the learning rate η, the mini-batch size, the model architecture (the number of layers, the number of hidden nodes per layer, the choice of activation functions), how to regularize, and so on. Gradient descent itself also has many architectural variants such as Adam (Kingma and Ba, 2015). Finally, most modern neural networks are built using computation graph for- malisms that make it easy and natural to do gradient computation and parallelization on vector-based GPUs (Graphic Processing Units). PyTorch (Paszke et al., 2017) and TensorFlow (Abadi et al., 2015) are two of the most popular"
+      }
+    ]
+  },
+  {
+    "question": "What is an activation function?",
+    "ground_truth_answer": "TODO",
+    "naive_rag_answer": "Based on the provided text, an **activation function** is a non-linear function (denoted as $f$ or $g$) applied to the output of a unit's summation ($z$) to produce an **activation value** ($a$). \n\nKey details include:\n*   **Purpose:** They are used to introduce non-linearity into the network. Without non-linear activation functions, a multi-layer network would be mathematically equivalent to a single-layer network.\n*   **Common Examples:** \n    *   **Sigmoid:** Maps values to a range between 0 and 1.\n    *   **Tanh:** A variant of the sigmoid that ranges from -1 to +1.\n    *   **ReLU (Rectified Linear Unit):** The simplest and most common; it returns $z$ if $z$ is positive and 0 otherwise ($max(z,0)$).\n*   **Properties:** These functions are often differentiable and can help \"squash\" outlier values toward specific ranges or means.",
+    "naive_source_chunks": [
+      {
+        "chunk_id": 7,
+        "text": ". We include some convenient intermediate variables: the output of the summation, z, and the output of the sigmoid, a. In this case the output of the unit y is the same as a, but in deeper networks we’ll reserve y to mean the ﬁnal output of the entire network, leavinga as the activation of an individual node. Let’s walk through an example just to get an intuition. Let’s suppose we have a unit with the following weight vector and bias: w = [ 0.2,0.3,0.9] b = 0.5 What would this unit do with the following input vector: x = [ 0.5,0.6,0.1] The resulting output y would be: y = σ (w· x + b) = 1 1 + e−(w·x+b) = 1 1 + e−(.5∗.2+.6∗.3+.1∗.9+.5) = 1 1 + e−0.87 = .70 In practice, the sigmoid is not commonly used as an activation function. A function that is very similar but almost always better is the tanh function shown in Fig"
+      },
+      {
+        "chunk_id": 5,
+        "text": ". We will refer to the output of this function as the activation value for the unit, a. Since we are just modeling a single unit, theactivation activation for the node is in fact the ﬁnal output of the network, which we’ll generally call y. So the value y is deﬁned as: y = a = f (z) We’ll discuss three popular non-linear functions f below (the sigmoid, the tanh, and the rectiﬁed linear unit or ReLU) but it’s pedagogically convenient to start with the sigmoid function since we saw it in Chapter 4:sigmoid y = σ (z) = 1 1 + e−z (6.3) The sigmoid (shown in Fig. 6.1) has a number of advantages; it maps the output into the range (0,1), which is useful in squashing outliers toward 0 or 1. And it’s differentiable, which as we saw in Section ?? will be handy for learning. Figure 6.1 The sigmoid function takes a real value and maps it to the range (0,1). It is nearly linear around 0 but outlier values get squashed toward 0 or 1. Substituting Eq. 6.2 into Eq"
+      },
+      {
+        "chunk_id": 8,
+        "text": ". A function that is very similar but almost always better is the tanh function shown in Fig. 6.3a;tanh tanh is a variant of the sigmoid that ranges from -1 to +1: y = tanh(z) = ez− e−z ez + e−z (6.5) The simplest activation function, and perhaps the most commonly used, is the rec- tiﬁed linear unit, also called the ReLU, shown in Fig. 6.3b. It’s just the same as zReLU when z is positive, and 0 otherwise: y = ReLU(z) = max(z,0) (6.6) These activation functions have different properties that make them useful for differ- ent language applications or network architectures. For example, the tanh function has the nice properties of being smoothly differentiable and mapping outlier values toward the mean. The rectiﬁer function, on the other hand, has nice properties that 4 CHAPTER 6 • N EURAL NETWORKS (a) (b) Figure 6.3 The tanh and ReLU activation functions. result from it being very close to linear"
+      },
+      {
+        "chunk_id": 30,
+        "text": ". The algorithm for computing the forward step in an n-layer feedforward network, given the input vector a[0] is thus simply: for i in 1,...,n z[i] = W[i] a[i−1] + b[i] a[i] = g[i](z[i]) ˆy = a[n] It’s often useful to have a name for the ﬁnal set of activations right before the ﬁnal softmax. So however many layers we have, we’ll generally call the unnormalized values in the ﬁnal vectorz[n], the vector of scores right before the ﬁnal softmax, the logits (see Eq. ??).logits The need for non-linear activation functions One of the reasons we use non- linear activation functions for each layer in a neural network is that if we did not, the resulting network is exactly equivalent to a single-layer network. Let’s see why this is true"
+      }
+    ]
+  },
+  {
+    "question": "Why are nonlinear activation functions important?",
+    "ground_truth_answer": "TODO",
+    "naive_rag_answer": "Nonlinear activation functions are important for two primary reasons:\n\n*   **Network Depth:** Without nonlinear activation functions at each layer, a multi-layer neural network would be mathematically equivalent to a single-layer network.\n*   **Training and Gradient Flow:** They provide properties essential for learning. For example, the **tanh** function is smoothly differentiable, while the **ReLU** function helps prevent the **vanishing gradient problem**, where derivatives become too small to be used for training.",
+    "naive_source_chunks": [
+      {
+        "chunk_id": 8,
+        "text": ". A function that is very similar but almost always better is the tanh function shown in Fig. 6.3a;tanh tanh is a variant of the sigmoid that ranges from -1 to +1: y = tanh(z) = ez− e−z ez + e−z (6.5) The simplest activation function, and perhaps the most commonly used, is the rec- tiﬁed linear unit, also called the ReLU, shown in Fig. 6.3b. It’s just the same as zReLU when z is positive, and 0 otherwise: y = ReLU(z) = max(z,0) (6.6) These activation functions have different properties that make them useful for differ- ent language applications or network architectures. For example, the tanh function has the nice properties of being smoothly differentiable and mapping outlier values toward the mean. The rectiﬁer function, on the other hand, has nice properties that 4 CHAPTER 6 • N EURAL NETWORKS (a) (b) Figure 6.3 The tanh and ReLU activation functions. result from it being very close to linear"
+      },
+      {
+        "chunk_id": 9,
+        "text": ". The rectiﬁer function, on the other hand, has nice properties that 4 CHAPTER 6 • N EURAL NETWORKS (a) (b) Figure 6.3 The tanh and ReLU activation functions. result from it being very close to linear. In the sigmoid or tanh functions, very high values of z result in values ofy that are saturated, i.e., extremely close to 1, and havesaturated derivatives very close to 0. Zero derivatives cause problems for learning, because as we’ll see in Section 6.6, we’ll train networks by propagating an error signal back- wards, multiplying gradients (partial derivatives) from each layer of the network; gradients that are almost 0 cause the error signal to get smaller and smaller until it is too small to be used for training, a problem called the vanishing gradient problem.vanishing gradient Rectiﬁers don’t have this problem, since the derivative of ReLU for high values ofz is 1 rather than very close to 0"
+      },
+      {
+        "chunk_id": 30,
+        "text": ". The algorithm for computing the forward step in an n-layer feedforward network, given the input vector a[0] is thus simply: for i in 1,...,n z[i] = W[i] a[i−1] + b[i] a[i] = g[i](z[i]) ˆy = a[n] It’s often useful to have a name for the ﬁnal set of activations right before the ﬁnal softmax. So however many layers we have, we’ll generally call the unnormalized values in the ﬁnal vectorz[n], the vector of scores right before the ﬁnal softmax, the logits (see Eq. ??).logits The need for non-linear activation functions One of the reasons we use non- linear activation functions for each layer in a neural network is that if we did not, the resulting network is exactly equivalent to a single-layer network. Let’s see why this is true"
+      },
+      {
+        "chunk_id": 7,
+        "text": ". We include some convenient intermediate variables: the output of the summation, z, and the output of the sigmoid, a. In this case the output of the unit y is the same as a, but in deeper networks we’ll reserve y to mean the ﬁnal output of the entire network, leavinga as the activation of an individual node. Let’s walk through an example just to get an intuition. Let’s suppose we have a unit with the following weight vector and bias: w = [ 0.2,0.3,0.9] b = 0.5 What would this unit do with the following input vector: x = [ 0.5,0.6,0.1] The resulting output y would be: y = σ (w· x + b) = 1 1 + e−(w·x+b) = 1 1 + e−(.5∗.2+.6∗.3+.1∗.9+.5) = 1 1 + e−0.87 = .70 In practice, the sigmoid is not commonly used as an activation function. A function that is very similar but almost always better is the tanh function shown in Fig"
+      }
+    ]
+  },
+  {
+    "question": "What is the purpose of the bias term in a neuron?",
+    "ground_truth_answer": "TODO",
+    "naive_rag_answer": "Based on the provided context, the bias term ($b$) serves the following purposes:\n\n*   **Component of the Weighted Sum:** It is an additional scalar term added to the weighted sum of the inputs ($z = w \\cdot x + b$) before a non-linear activation function is applied.\n*   **Defining the Decision Boundary:** In a linear classifier like a perceptron, the bias term is part of the equation ($w_1x_1 + w_2x_2 + b = 0$) that defines the decision boundary (a line or hyperplane). \n*   **Positioning the Boundary:** It helps determine the intercept of the decision boundary, allowing the model to shift the boundary to effectively separate different categories in the input space.",
+    "naive_source_chunks": [
+      {
+        "chunk_id": 33,
+        "text": ". Fig. 6.9 shows a visualization. x1 x2 xn0 … … +1 b … UW h1 y1 y2 yn2 h2 h3 hn1 x1 x2 xn0 … … x0=1 … UW h1 y1 y2 yn2 h2 h3 hn1 (a) (b) Figure 6.9 Replacing the bias node (shown in a) with x0 (b). We’ll continue showing the bias as b when we go over the learning algorithm in Section 6.6, but going forward in the book, for most ﬁgures and some equations we’ll use this simpliﬁed notation without explicit bias terms. 6.4 Feedforward networks for NLP: Classiﬁcation Let’s see how to apply feedforward networks to NLP classiﬁcation tasks. In practice, simple feedforward networks aren’t the way we do text classiﬁcation; for real appli- cations we would use more sophisticated architectures like the BERT transformers 12 CHAPTER 6 • N EURAL NETWORKS of Chapter 9"
+      },
+      {
+        "chunk_id": 4,
+        "text": ". At its heart, a neural unit is taking a weighted sum of its inputs, with one addi- tional term in the sum called a bias term. Given a set of inputs x1...xn, a unit hasbias term a set of corresponding weights w1...wn and a bias b, so the weighted sum z can be represented as: z = b + ∑ i wixi (6.1) Often it’s more convenient to express this weighted sum using vector notation; recall from linear algebra that a vector is, at heart, just a list or array of numbers. Thusvector we’ll talk about z in terms of a weight vector w, a scalar bias b, and an input vector x, and we’ll replace the sum with the convenient dot product: z = w· x + b (6.2) As deﬁned in Eq. 6.2,z is just a real valued number. Finally, instead of using z, a linear function of x, as the output, neural units apply a non-linear function f to z. We will refer to the output of this function as the activation value for the unit, a"
+      },
+      {
+        "chunk_id": 24,
+        "text": ". If we are doing a binary task like sentiment classiﬁcation, we might have a sin- gle output node, and its scalar value y is the probability of positive versus negative sentiment. If we are doing multinomial classiﬁcation, such as assigning a part-of- speech tag, we might have one output node for each potential part-of-speech, whose output value is the probability of that part-of-speech, and the values of all the output nodes must sum to one. The output layer is thus a vector y that gives a probability distribution across the output nodes. 6.3 • F EEDFORWARD NEURAL NETWORKS 9 Let’s see how this happens. Like the hidden layer, the output layer has a weight matrix (let’s call it U), but some models don’t include a bias vector b in the output layer, so we’ll simplify by eliminating the bias vector in this example"
+      },
+      {
+        "chunk_id": 12,
+        "text": ". These weights/biases are just one from an inﬁnite number of possible sets of weights and biases that would implement the functions. It turns out, however, that it’s not possible to build a perceptron to compute logical XOR! (It’s worth spending a moment to give it a try!) The intuition behind this important result relies on understanding that a percep- tron is a linear classiﬁer. For a two-dimensional input x1 and x2, the perceptron equation, w1x1 + w2x2 + b = 0 is the equation of a line. (We can see this by putting it in the standard linear format: x2 = (−w1/w2)x1 + (−b/w2).) This line acts as a decision boundary in two-dimensional space in which the output 0 is assigned to alldecision boundary inputs lying on one side of the line, and the output 1 to all input points lying on the other side of the line. If we had more than 2 inputs, the decision boundary becomes a hyperplane instead of a line, but the idea is the same, separating the space into two categories. Fig"
+      }
+    ]
+  },
+  {
+    "question": "What does a hidden layer do?",
+    "ground_truth_answer": "TODO",
+    "naive_rag_answer": "A hidden layer forms a representation of the input by performing a three-step computation: multiplying the weight matrix by the input vector, adding a bias vector, and applying an activation function (such as sigmoid, tanh, or ReLU). In a standard fully-connected architecture, each hidden unit sums over all units in the previous layer. The resulting output vector $h$ is then used by the output layer to compute a final output, such as a classification decision.",
+    "naive_source_chunks": [
+      {
+        "chunk_id": 20,
+        "text": ". In the standard architecture, each layer is fully-connected, meaning that each unit in each layer takes as input the outputsfully-connected from all the units in the previous layer, and there is a link between every pair of units from two adjacent layers. Thus each hidden unit sums over all the input units. Recall that a single hidden unit has as parameters a weight vector and a bias. We represent the parameters for the entire hidden layer by combining the weight vector and bias for each unit i into a single weight matrix W and a single bias vector b for the whole layer (see Fig. 6.8). Each element W ji of the weight matrix W represents the weight of the connection from the ith input unit xi to the jth hidden unit h j"
+      },
+      {
+        "chunk_id": 23,
+        "text": ". The hidden layer has dimensionality n1, so h∈ Rn1 and also b∈ Rn1 (since each hidden unit can take a different bias value). And the weight matrix W has dimensionality W∈ Rn1×n0, i.e. [n1× n0]. Take a moment to convince yourself that the matrix multiplication in Eq. 6.8 will compute the value of each h j as σ (∑n0 i=1 W jixi + b j ) . As we saw in Section 6.2, the resulting value h (for hidden but also for hypoth- esis) forms a representation of the input. The role of the output layer is to take this new representation h and compute a ﬁnal output. This output could be a real- valued number, but in many cases the goal of the network is to make some sort of classiﬁcation decision, and so we will focus on the case of classiﬁcation. If we are doing a binary task like sentiment classiﬁcation, we might have a sin- gle output node, and its scalar value y is the probability of positive versus negative sentiment"
+      },
+      {
+        "chunk_id": 22,
+        "text": ". The output of the hidden layer, the vectorh, is thus the following (for this exam- ple we’ll use the sigmoid function σ as our activation function): h = σ (Wx + b) (6.8) Notice that we’re applying the σ function here to a vector, while in Eq. 6.3 it was applied to a scalar. We’re thus allowing σ (·), and indeed any activation function g(·), to apply to a vector element-wise, so g[z1,z2,z3] = [g(z1),g(z2),g(z3)]. Let’s introduce some constants to represent the dimensionalities of these vectors and matrices. We’ll refer to the input layer as layer 0 of the network, and have n0 represent the number of inputs, so x is a vector of real numbers of dimension n0, or more formally x∈ Rn0, a column vector of dimensionality [n0× 1]. Let’s call the hidden layer layer 1 and the output layer layer 2. The hidden layer has dimensionality n1, so h∈ Rn1 and also b∈ Rn1 (since each hidden unit can take a different bias value). And the weight matrix W has dimensionality W∈ Rn1×n0, i.e. [n1× n0]"
+      },
+      {
+        "chunk_id": 21,
+        "text": ". 6.8). Each element W ji of the weight matrix W represents the weight of the connection from the ith input unit xi to the jth hidden unit h j. The advantage of using a single matrix W for the weights of the entire layer is that now the hidden layer computation for a feedforward network can be done very 8 CHAPTER 6 • N EURAL NETWORKS x1 x2 xn0 … … +1 b … UW input layer hidden layer output layer h1 y1 y2 yn2 h2 h3 hn1 Figure 6.8 A simple 2-layer feedforward network, with one hidden layer, one output layer, and one input layer (the input layer is usually not counted when enumerating layers). efﬁciently with simple matrix operations. In fact, the computation only has three steps: multiplying the weight matrix by the input vector x, adding the bias vector b, and applying the activation functiong (such as the sigmoid, tanh, or ReLU activation function deﬁned above)"
+      }
+    ]
+  }
+]
